@@ -68,7 +68,7 @@
                     var oldlog = jQuery.parseJSON(data);
                     for (var i = 0; i < oldlog.length; i++) {
                         var message = jQuery.parseJSON(oldlog[i]);
-                        $("#logger").append($("<span/>").text(message['content']));
+                        $("#logger").append($("<span/>").text(message['content']).css("display", "block"));
                         if (autoscroll['logger']) {
                             var height = $('#logger')[0].scrollHeight;
                             $('#logger').scrollTop(height);
@@ -91,7 +91,7 @@
                     }
                 } else {
                     var message = jQuery.parseJSON(data);
-                    $("#logger").append($("<span/>").text(message['content']));
+                    $("#logger").append($("<span/>").text(message['content']).css("display", "block"));
                     if (autoscroll['logger']) {
                         var height = $('#logger')[0].scrollHeight;
                         $('#logger').scrollTop(height);
