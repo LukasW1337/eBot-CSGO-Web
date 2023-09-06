@@ -62,6 +62,7 @@
             });
 
             socket.on("loggerHandler", function(data) {
+                console.log(data)
                 if (loggerFirstMessage) {
                     loggerFirstMessage = false;
                     var oldlog = jQuery.parseJSON(data);
