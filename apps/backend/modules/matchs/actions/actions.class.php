@@ -871,11 +871,14 @@ class matchsActions extends sfActions
                     $match->max_round = sfConfig::get("app_default_max_round");
                     $match->overtime_startmoney = sfConfig::get("app_default_overtime_startmoney");
                     $match->overtime_max_round = sfConfig::get("app_default_overtime_max_round");
+                    /*
                     if ($stage['type'] != "group") {
                         $match->config_ot = true;
                     } else {
                         $match->config_ot = false;
                     }
+                    */
+                    $match->config_ot = true;
                     $match->config_full_score = false;
                     $match->config_streamer = false;
                     $match->config_knife_round = true;
